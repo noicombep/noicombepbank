@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Đăng Kí App Ngân Hàng</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-600">Đăng Kí App Ngân Hàng</h1>
+    <div class="space-x-4">
+      <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
+      <a href="https://www.facebook.com/profile.php?id=61554923112075" class="text-gray-700 hover:text-blue-600">Contact me</a>
+      <a href="https://www.zalo.me/g/ucfuvh117" class="text-gray-700 hover:text-blue-600">Group Zalo</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-cover bg-center bg-no-repeat py-32 text-center text-Black" style="background-image: url('https://cdn-media.sforum.vn/storage/app/media/anh-dep-68.jpg');" >
+    <h2 class="text-4xl font-bold mb-4">Welcome to Noicombep</h2>
+    <p class="text-lg text-gray-700">Đăng kí app nhận công</p>
+	
+  </section>
+  <h1 class="text-2xl font-bold text-Red-600" style="justify-content: center; text-align: center; color: red;">Danh Sách App Ngân Hàng</h1>
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="modal-title" id="infoModalLabel">Liên Hệ</h2>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body" id="modalBody">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+			</div>
+		</div>
+	</div>
+</div>
+  <!-- Product Grid -->
+  <section class="p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+      <img src="https://thebank.vn/uploads/2021/05/05/thebank_logonganhangmb_bank_1620181539.jpg" alt="Product 1" class="w-full h-48 object-cover rounded">
+      <h3 class="text-lg font-semibold mt-2">MB Bank</h3>
+      <p class="text-sm text-gray-600">Công: 70.000</p>
+	  <button onclick="showInfo()" class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Đăng Ký ngay</button>
+    </div>
+
+	<div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+		<img src="https://mir-s3-cdn-cf.behance.net/projects/404/21bc6e215704317.Y3JvcCw5NzIsNzYxLDExMyww.jpg" alt="Product 1" class="w-full h-48 object-cover rounded">
+		<h3 class="text-lg font-semibold mt-2">VP Bank</h3>
+		<p class="text-sm text-gray-600">Công: 80.000</p>
+		<button onclick="showInfo()" class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Đăng Ký ngay</button>
+	  </div>
+	  <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+		<img src="https://eu-images.contentstack.com/v3/assets/blt7dacf616844cf077/blt0654bb672f235b45/67998f9f954ae96de6b01ce1/MSB-square-scaled.jpg?width=1280&auto=webp&quality=95&format=jpg&disable=upscale" alt="Product 1" class="w-full h-48 object-cover rounded">
+		<h3 class="text-lg font-semibold mt-2">MSB</h3>
+		<p class="text-sm text-gray-600">Công: 50.000</p>
+		<button onclick="showInfo()" class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Đăng Ký ngay</button>
+	  </div>
+	  <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxBSJI4hLfmG_1XNJPYvLolo-FTCH_iLaYvA&s" alt="Product 1" class="w-full h-48 object-cover rounded">
+		<h3 class="text-lg font-semibold mt-2">PVComBank</h3>
+		<p class="text-sm text-gray-600">Công: 60.000</p>
+		<button onclick="showInfo()" class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Đăng Ký ngay</button>
+	  </div>
+	  <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+		<img src="https://inkythuatso.com/uploads/images/2021/09/logo-vietcombank-inkythuatso-10-10-41-18.jpg" alt="Product 1" class="w-full h-48 object-cover rounded">
+		<h3 class="text-lg font-semibold mt-2">VCBank</h3>
+		<p class="text-sm text-gray-600">Công: 20.000-30.000</p>
+		<button onclick="showInfo()" class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Đăng Ký ngay</button>
+	  </div>
+	  <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+		<img src="https://bidv.com.vn/wps/wcm/connect/674b6448-d23b-484e-b4d3-1e86fa68bd0d/Logo+Nguyen+ban+nen+trang.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE-674b6448-d23b-484e-b4d3-1e86fa68bd0d-pfdjkOq" alt="Product 1" class="w-full h-48 object-cover rounded">
+		<h3 class="text-lg font-semibold mt-2">BIDV</h3>
+		<p class="text-sm text-gray-600">Công: 20.000-30.000</p>
+		<button onclick="showInfo()" class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Đăng Ký ngay</button>
+	  </div>
+	  <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Techcombank_logo.png" alt="Product 1" class="w-full h-48 object-cover rounded">
+		<h3 class="text-lg font-semibold mt-2">TechComBank</h3>
+		<p class="text-sm text-gray-600">Công: 30.000</p>
+		<button onclick="showInfo()" class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Đăng Ký ngay</button>
+	  </div>
+    <!-- Duplicate product cards for more items -->
+	 
+  </section>
+
+  
+
+  <!-- Footer -->
+  <footer class="bg-white text-center p-4 mt-12 shadow-inner">
+    <p class="text-sm text-gray-600">© Noicombep</p>
+	<div class="flex gap-4 mt-4 justify-center">
+		<a href="https://zalo.me/g/ucfuvh117" target="_blank"
+		   class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg shadow">
+		  Liên hệ Zalo
+		</a>
+		<a href="https://www.facebook.com/profile.php?id=61554923112075" target="_blank"
+		   class="bg-blue-700 hover:bg-blue-800 text-white font-medium py-2 px-4 rounded-lg shadow">
+		  Liên hệ Facebook
+		</a>
+	  </div>
+	  
+  </footer>
+  <!-- Modal Bootstrap 5 -->
+
+  
+
+  <script>
+	function showInfo() {
+                document.getElementById('modalBody').innerHTML = `<div class="flex gap-4 mt-4 justify-center">
+  <a href="https://zalo.me/g/ucfuvh117" target="_blank"
+     class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg shadow">
+    Liên hệ Zalo
+  </a>
+  <a href="https://www.facebook.com/profile.php?id=61554923112075" target="_blank"
+     class="bg-blue-700 hover:bg-blue-800 text-white font-medium py-2 px-4 rounded-lg shadow">
+    Liên hệ Facebook
+  </a>
+</div>
+`;
+                var infoModal = new bootstrap.Modal(document.getElementById('infoModal'));
+                infoModal.show();
+            }
+  </script>
+  
+
+</body>
+</html>
